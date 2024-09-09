@@ -20,6 +20,6 @@ You will need to install the following grids from [here](https://sophie-newman.g
 * maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps-fixed-hydrogen_density
   
 
-Then add these to a grids directory within the cloudy-maraston repository
+Then add these to a grids directory within the `cloudy-maraston` repository
 
     mkdir grids
