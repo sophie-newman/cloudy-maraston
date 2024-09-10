@@ -11,3 +11,15 @@ To install, enter the `synthesizer` directory and install with pip.
     pip install .
 
 The documentation for synthesizer can be found at https://flaresimulations.github.io/synthesizer/ 
+
+You will need to install the following grids from [here](https://sophie-newman.github.io/cloudy-maraston.html):
+
+* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps
+* maraston13_kroupa-max_age:7.0
+* maraston13_salpeter-max_age:7.0
+* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps-fixed-hydrogen_density
+  
+
+Then add these to a grids directory within the `cloudy-maraston` repository
+
+    mkdir grids
