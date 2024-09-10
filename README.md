@@ -4,11 +4,11 @@
     <img src="cloudy-maraston_transparent.png" alt="A yellow and orange cloud with the text 'cloudy-maraston" width="400"/>
 </div>
 
-A repository showing how to recreate the plots from the paper Newman et al. 2024, "Cloudy-Maraston: Integrating nebular line and continuum emission with the M13 stellar population synthesis models"
+A repository showing how to recreate the plots from the paper Newman et al. 2024, "`cloudy-maraston`: Integrating nebular line and continuum emission with the M13 stellar population synthesis models"
 
 ## Prerequisites
 
-This project used the code synthesizer which will be required to run the notebooks. To install synthesizer, first clone the latest version of `synthesizer`
+This project used the code `synthesizer` which will be required to run the notebooks. To install `synthesizer`, first clone the latest version of `synthesizer`
 
     git clone https://github.com/flaresimulations/synthesizer.git
 
@@ -17,7 +17,7 @@ To install, enter the `synthesizer` directory and install with pip.
     cd synthesizer
     pip install .
 
-The documentation for synthesizer can be found at https://flaresimulations.github.io/synthesizer/ 
+The documentation for `synthesizer` can be found at https://flaresimulations.github.io/synthesizer/ 
 
 Additionally these packages will need to be installed to run the notebooks:
 
