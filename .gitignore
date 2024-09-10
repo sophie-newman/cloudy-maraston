@@ -1,2 +1,2 @@
-grids/
-data/
+grids/*.hdf5
+data/*.fits
