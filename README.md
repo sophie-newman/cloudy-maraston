@@ -1,6 +1,6 @@
 # `cloudy-maraston`
 
-![alt text](cloudy-maraston_transparent.png "cloudy-maraston logo")
+<img src="cloudy-maraston_transparent.png" alt="A yellow and orange cloud with the text 'cloudy-maraston" width="200"/>
 
 A repository showing how to recreate the plots from the paper Newman et al. 2024, "Cloudy-Maraston: Integrating nebular line and continuum emission with the M13 stellar population synthesis models"
 
