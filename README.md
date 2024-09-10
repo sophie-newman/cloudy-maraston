@@ -14,12 +14,21 @@ The documentation for synthesizer can be found at https://flaresimulations.githu
 
 You will need to install the following grids from [here](https://sophie-newman.github.io/cloudy-maraston.html):
 
-* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps
-* maraston13_kroupa-max_age:7.0
-* maraston13_salpeter-max_age:7.0
-* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps-fixed-hydrogen_density
-  
+* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps.hdf5
+* maraston13_kroupa-max_age:7.0.hdf5
+* maraston13_salpeter-max_age:7.0.hdf5
+* maraston13_kroupa-max_age:7.0_cloudy-c23.01-sps-fixed-hydrogen_density.hdf5
 
-Then add these to a grids directory within the `cloudy-maraston` repository
+and for the data comparison in Notebook 2 you will need the following SDSS and JADES files:
+
+* galSpecInfo-dr8.fits
+* galSpecLine-dr8.fits
+* jades_dr3_medium_gratings_public_gn_v1.1.fits
+* jades_dr3_medium_gratings_public_gs_v1.1.fits
+  
+These can be installed from the SDSS DR8 website and the JADES website. 
+
+Add the grids to a grids directory within the `cloudy-maraston` repository, and add the data to a data directory.
 
     mkdir grids
+    mkdir data
