@@ -26,7 +26,7 @@ and for the data comparison in Notebook 2 you will need the following SDSS and J
 * jades_dr3_medium_gratings_public_gn_v1.1.fits
 * jades_dr3_medium_gratings_public_gs_v1.1.fits
   
-These can be installed from the SDSS DR8 website and the JADES website. 
+These can be installed from the [SDSS DR8 website](https://www.sdss3.org/dr8/spectro/spectro_access.php) and the [JADES website](https://jades-survey.github.io/scientists/data.html). 
 
 Add the grids to a grids directory within the `cloudy-maraston` repository, and add the data to a data directory.
 
