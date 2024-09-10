@@ -1,4 +1,4 @@
-# `Cloudy-maraston`
+# `Cloudy-Maraston`
 
 <div align="center">
     <img src="cloudy-maraston_transparent.png" alt="A yellow and orange cloud with the text 'Cloudy-maraston" width="400"/>
