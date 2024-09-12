@@ -1,0 +1,216 @@
+JADES - NIRSpec - Year 2
+Emission line flux table
+------------------------
+
+RELEASE: v3.0
+DATE: 27 March 2024
+
+
+Description:
+Table of redshifts and emission line fluxes from JADES NIRSpec observations.
+Further details can be found in the JADES NIRSpec Data Release 3 Paper
+(D'Eugenio et al. 2023).
+
+Two tables are included in this release.
+
+##1: hlsp_jades_jwst_nirspec_goods-s-deephst_clear-prism_line-fluxes_v1.0_catalog.fits
+3#2: hlsp_jades_jwst_nirspec_goods-s-deephst_gratings_line-fluxes_v1.0_catalog.fits
+
+Table 1 reports fluxes of emission lines measured from low-resolution
+CLEAR/PRISM observations.
+Table 2 reports emission line fluxes measured from medium-resolution (R~1000)
+F070LP/G140M, F170LP/G235Mand F290LP/G395M observations.
+
+Both tables also report redshifts (measured from the combined low- and
+medium-resolution data), and information about the targeting and observations.
+A more detailed description of the columns is given below.
+More details can be found in D'Eugenio et al. (2023).
+
+-----------------------
+Note on target IDs
+NIRSpec_ID values contain duplicates due to the fact that the input photometric
+catalog was updated frequently throughout the survey. Different targets may 
+share the same NIRSpec_ID, even including in the same observing program (PID).
+To match galaxies to their spectra, the recommended procedure is to use both the
+NIRSpec_ID and TIER  columns.
+Repeat observations of the same target may or may not have the same NIRSpec_ID.
+NIRCam_ID values are unique, but not all targets have a NIRCam_ID.
+-----------------------
+
+-----------------------
+Tables 1 and 2 : CLEAR/PRISM
+
+jades_dr3_prism_public_gn_v1.1.fits
+jades_dr3_prism_public_gs_v1.1.fits
+
+-----------------------
+Description of columns:
+-----------------------
+
+NIRSpec_ID     : ID used in the NIRSpec input target selection catalog (see note
+                  on target IDs)
+TIER           : Used to uniquely identify observations (see note on target IDs)
+PID            : Program ID of the observations
+Field          : A string denoting the target field.
+NIRCam_ID      : ID of the closest match within 0.2" in the JADES NIRCam data
+                  release catalogue (Robertson et al. 2024). Values of -9999
+                  mean that no source exists within 0.2" (due to re-segmentation
+                  of the images). Values of -1111 indicate targets outside the
+                  NIRCam footprint.
+RA_TARG        : Right Ascension of target as used for target allocation and
+                  pathloss correction
+Dec_TARG       : Declination of target as used for target allocation and
+                  pathloss correction
+RA_NIRCam      : Right Ascension of the closest match within 0.2" in the JADES
+                  NIRCam data release catalogue (Robertson et al. 2024)
+Dec_NIRCam     : Declination of the closest match within 0.2" in the JADES
+                  NIRCam data release catalogue (Robertson et al. 2024)
+Priority       : Priority class in target assignment process
+z_Spec         : Best spectroscopic redshift derived from NIRSpec observations
+z_Spec_flag    : Redshift quality flag:
+                      A - highly robust, S/N>5 emission lines in R~1000 data
+                      B - highly robust, S/N>5 emission lines in Prism/Clear
+                      C - secure, visually identified from spectral breaks
+                                    and/or low S/N emission lines
+                      D - tentative redshifts
+                      E - no redshift
+x_offset           : Intra-shutter offset of the source in arcseconds, averaged
+                      over the multiple pointings
+y_offset           : Intra-shutter offset of the source in arcseconds, averaged
+                      over the multiple pointings
+assigned_Prism     : True if source observed with CLEAR/PRISM, False otherwise
+assigned_G140M     : True if source observed with F070LP/G140M, False otherwise
+assigned_G235M     : True if source observed with F170LP/G235M, False otherwise
+assigned_G395M     : True if source observed with F290LP/G395M, False otherwise
+assigned_G395H     : True if source observed with F290LP/G395H, False otherwise
+nDither_Pr         : Number of dithers in CLEAR/PRISM
+nDither_Gr         : Number of dithers in gratings
+nInt_Prism         : Number of integrations (nods and dithers) for the CLEAR/PRISM
+                      observations.
+nInt_G140M         : Number of integrations (nods and dithers) for the F070LP/G140M
+                      observations.
+nInt_G235M         : Number of integrations (nods and dithers) for the F170LP/G235M
+                      observations.
+nInt_G395M         : Number of integrations (nods and dithers) for the F290LP/G395M
+                      observations.
+nInt_G395H         : Number of integrations (nods and dithers) for the F290LP/G395H
+                      observations.
+tExp_Prism         : Total exposure time for the CLEAR/PRISM observations [s]
+tExp_G140M         : Total exposure time for the F070LP/G140M observations [s]
+tExp_G235M         : Total exposure time for the F170LP/G235M observations [s]
+tExp_G395M         : Total exposure time for the F290LP/G395M observations [s]
+tExp_G395H         : Total exposure time for the F290LP/G395H observations [s]
+ObsDate            : Date of observations
+z_PRISM            : Redshift derived from S/N>5 emission lines in the
+                      Prism/Clear spectrum of this object (if applicable).
+PRISM_flux_flag    : True if any lines removed in the prism observations. False
+                      otherwise
+DR_flag            : True if problems in the data reduction. False otherwise
+[LineID]_flux      : Measured emission line flux from the Prism/Clear spectrum
+                      in units of x10^-18 erg s-1 cm-2
+                      (See list of emission lines below)
+[LineID]_err       : Uncertainty on measured emission lines flux
+Blnd_[LineIDs]_flux : Total fluxes measured for blended complexes
+Blnd_[LineIDs]_err  : Uncertainty on total flux measured for blended complexes
+
+----------------------------------------------------------------------
+Disambiguation of emission line and blend labels in Prism/Clear table:
+----------------------------------------------------------------------
+C4_1549          : CIV 1548,1551
+Blnd_He2_O3_1650 : Blend of HeII 1640 + OIII]1660,1666
+C3_1907          : CIII] 1907,1909
+Mg2_2796         : MgII 2795,2803
+O2_3727          : [OII] 3726,3729
+Ne3_3869         : [NeIII] 3869
+Ne3_3968         : [NeIII] 3968
+HD_4102          : H-delta
+HG_4340          : H-gamma, where this is not blended with [OIII] 4363
+O3_4363          : [OIII] 4363, where this is not blended with H-gamma
+Blnd_HG_O3       : Blend of H-gamma + [OIII] 4363
+HB_4861          : H-beta, where this is not blended with [OIII] 4959
+O3_4959          : [OIII] 4959, where this is not blended with [OIII] 5007
+O3_5007          : [OIII] 5007, where this is not blended with [OIII] 4959
+Blnd_HB_O3_5007d : Blend of H-beta + [OIII] 4959 + [OIII] 5007
+O3_5007d         : Blend of [OIII] 4959 + 5007, where not blended with H-beta
+He1_5875         : HeI 5875
+O1_6300          : [OI] 6300
+HA_6563          : Single component which is a blend of H-alpha and [NII] 6584
+S2_6733d         : Blend of [SII] 6718 + 6733, where not blended with H-alpha
+Blnd_HA_N2_S2    : Blend of H-alpha + [NII] 6584 + [SII] 6718 + 6733
+He1_7065         : HeI 7065
+S3_9069          : [SIII] 9069
+S3_9532          : [SIII] 9532
+PaD_10049        : Pa-delta
+He1_10829        : HeI 10829
+PaG_10938        : Pa-gamma
+PaB_12818        : Pa-beta
+PaA_18751        : Pa-alpha
+
+General words on using reported Prism emission line fluxes:
+ - Which lines are blended changes as a function of redshift. For example,
+   above z>5.3, H-beta, [OIII]4959, [OIII]5007 are well separated and reported
+   independently. Between 2<z<5.3 H-beta is reported separately, but
+   [OIII]4959+5007 is reported as a blend ("O3_5007d"). Below z<2, the entire
+   complex is reported as a blend ("Blnd_HB_O3_5007d")
+ - There will be cases where reported lines fluxes contain contributions from
+   blending with other faint lines, not explicitly listed here.
+   For example, [NeIII]3869 can be blended with HeI 3889 emission.
+   The reported flux in such cases reflects the whole complex.
+
+
+-----------------------
+Tables 3 and 4 : R~1000 gratings
+jades_dr3_medium_gratings_public_gn_v1.1.fits
+jades_dr3_medium_gratings_public_gs_v1.1.fits
+
+-----------------------
+Description of columns:
+-----------------------
+
+*Columns are as for the Table 1 above except for:
+
+z_PRISM        : Redshift derived from S/N>5 emission lines in the
+                  R~1000 grating spectra of this object (if applicable).
+[LineID]_flux  : Measured emission line flux from the R~1000 spectra in units
+                  of x10^-20 erg s-1 cm-2. (See list of emission lines below)
+[LineID]_err    : Uncertainty on measured emission lines flux
+
+Note: There is typically spectral overlap between the G140M/F070LP and
+G235M/F170LP spectra and the G235M/F170LP and G395M/F290LP spectra. In cases
+where are prominent emission line falls in an overlapping region (and thus
+detected in two independent observations), we une the lowest-resolution observation
+(reddest grating) which has generally higher S/N.
+
+-----------------------------------------------------------
+Disambiguation of emission line labels in the R~1000 table:
+-----------------------------------------------------------
+LyA_1216  : Ly-alpha
+C4_1549   : CIV 1548,1551     *
+C3_1907   : CIII] 1907,1909   *
+He2_1640  : HeII 1640
+O3_1666   : OIII] 1660,1666   *
+O2_3727   : [OII] 3726, 3729  *
+Ne3_3869  : [NeIII] 3869
+Ne3_3968  : [NeIII] 3968
+HD_4102   : H-delta
+HG_4340   : H-gamma
+O3_4363   : [OIII] 4363
+HB_4861   : H-beta
+O3_4959   : [OIII] 4959
+O3_5007   : [OIII] 5007
+He1_5875  : HeI 5875
+O1_6300   : [OI] 6300
+HA_6563   : H-alpha
+N2_6584   : [NII] 6584
+S2_6718   : [SII] 6718
+S2_6733   : [SII] 6733
+S3_9069   : [SIII] 9069
+S3_9532   : [SIII] 9532
+PaD_10049 : Pa-delta
+He1_10829 : HeI 10829
+PaG_10938 : Pa-gamma
+PaB_12818 : Pa-beta
+PaA_18751 : Pa-alpha
+
+* These doublets are not resolved into individual components even in these
+   R~1000 observations.
