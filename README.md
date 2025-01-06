@@ -21,18 +21,11 @@ The documentation for `synthesizer` can be found at https://flaresimulations.git
 
 Additionally these packages will need to be installed to run the notebooks:
 
-    pip install numpy matplotlib unyt cmasher astropy seaborn 
+    pip install numpy matplotlib unyt cmasher astropy seaborn pandas
 
 ## Grids and data
 
-You will need to install the following grids from [here](https://sophie-newman.github.io/Cloudy-maraston.html) and place them in the `grids` directory:
-
-* maraston13_kroupa-max_age:7.0_Cloudy-c23.01-sps.hdf5
-* maraston13_kroupa-max_age:7.0.hdf5
-* maraston13_salpeter-max_age:7.0.hdf5
-* maraston13_kroupa-max_age:7.0_Cloudy-c23.01-sps-fixed-hydrogen_density.hdf5
-
-and for the data comparison in Notebook 2 you will need the following SDSS and JADES files, downloaded into the `data` directory:
+You will need to download the grids from [here](https://sophie-newman.github.io/Cloudy-maraston.html) and place them in the `grids` directory, and for the data comparison in Notebook 2 you will need the following SDSS and JADES files, downloaded into the `data` directory:
 
 * galSpecInfo-dr8.fits
 * galSpecLine-dr8.fits
