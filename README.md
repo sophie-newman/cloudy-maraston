@@ -25,7 +25,7 @@ Additionally these packages will need to be installed to run the notebooks:
 
 ## Grids and data
 
-You will need to download the grids from [here]([https://sophie-newman.github.io/Cloudy-maraston.html](https://zenodo.org/records/13744975) and place them in the `grids` directory, and for the data comparison in Notebook 2 you will need the following SDSS and JADES files, downloaded into the `data` directory:
+You will need to download the grids from [here](https://zenodo.org/records/13744975) and place them in the `grids` directory, and for the data comparison in Notebook 2 you will need the following SDSS and JADES files, downloaded into the `data` directory:
 
 * galSpecInfo-dr8.fits
 * galSpecLine-dr8.fits
