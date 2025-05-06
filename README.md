@@ -12,12 +12,16 @@ This project used the code `synthesizer` which will be required to run the noteb
 
     git clone git@github.com:synthesizer-project/synthesizer.git
 
+and checkout the version used when writing this set of notebooks: 
+
+    git checkout v0.6.0-beta
+
 To install, enter the `synthesizer` directory and install with pip.
 
     cd synthesizer
     pip install .
 
-The documentation for `synthesizer` can be found at https://synthesizer-project.github.io/synthesizer/
+The documentation for the latest version of `synthesizer` can be found at https://synthesizer-project.github.io/synthesizer/
 
 Additionally these packages will need to be installed to run the notebooks:
 
